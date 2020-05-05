@@ -14,6 +14,7 @@
 		0937BFF82427B0B30042A384 /* Pranner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0937BFF62427B0B30042A384 /* Pranner.xcdatamodeld */; };
 		0937BFFA2427B0B40042A384 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0937BFF92427B0B40042A384 /* Assets.xcassets */; };
 		0937BFFD2427B0B40042A384 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0937BFFB2427B0B40042A384 /* LaunchScreen.storyboard */; };
+		84962F7424621488007F1232 /* TaskListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84962F7324621488007F1232 /* TaskListController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		0937BFF92427B0B40042A384 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0937BFFC2427B0B40042A384 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0937BFFE2427B0B40042A384 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84962F7324621488007F1232 /* TaskListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,49 @@
 		0937BFEC2427B0B30042A384 /* Pranner */ = {
 			isa = PBXGroup;
 			children = (
-				0937BFED2427B0B30042A384 /* AppDelegate.swift */,
-				0937BFEF2427B0B30042A384 /* SceneDelegate.swift */,
-				0937BFF12427B0B30042A384 /* ViewController.swift */,
-				0937BFF32427B0B30042A384 /* Main.storyboard */,
-				0937BFF92427B0B40042A384 /* Assets.xcassets */,
-				0937BFFB2427B0B40042A384 /* LaunchScreen.storyboard */,
+				84962F76246214CE007F1232 /* View */,
+				84962F722462146C007F1232 /* Controller */,
 				0937BFFE2427B0B40042A384 /* Info.plist */,
 				0937BFF62427B0B30042A384 /* Pranner.xcdatamodeld */,
 			);
 			path = Pranner;
+			sourceTree = "<group>";
+		};
+		84962F722462146C007F1232 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				84962F77246214E5007F1232 /* Delegate */,
+				0937BFF12427B0B30042A384 /* ViewController.swift */,
+				84962F752462149B007F1232 /* List */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		84962F752462149B007F1232 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				84962F7324621488007F1232 /* TaskListController.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		84962F76246214CE007F1232 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0937BFF32427B0B30042A384 /* Main.storyboard */,
+				0937BFFB2427B0B40042A384 /* LaunchScreen.storyboard */,
+				0937BFF92427B0B40042A384 /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84962F77246214E5007F1232 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				0937BFED2427B0B30042A384 /* AppDelegate.swift */,
+				0937BFEF2427B0B30042A384 /* SceneDelegate.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +179,7 @@
 				0937BFF22427B0B30042A384 /* ViewController.swift in Sources */,
 				0937BFEE2427B0B30042A384 /* AppDelegate.swift in Sources */,
 				0937BFF82427B0B30042A384 /* Pranner.xcdatamodeld in Sources */,
+				84962F7424621488007F1232 /* TaskListController.swift in Sources */,
 				0937BFF02427B0B30042A384 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
