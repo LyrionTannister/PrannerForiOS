@@ -10,9 +10,20 @@ import UIKit
 
 class TaskListController: UITableViewController {
 
+    private var taskList : [Task] = [Task(name: "Task 1", category: "Category 1", priority: nil, deadline: nil),
+                                     Task(name: "Task 2", category: "Category 2", priority: nil, deadline: Date()),
+                                     Task(name: "Task 3", category: "Category 3", priority: "High", deadline: nil),
+                                     Task(name: "Task 4", category: "Category 4", priority: "Standard", deadline: Date())
+                                     
+    ]
+    
+    let dateFormatter = DateFormatter()
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        dateFormatter.dateStyle = .long
+        dateFormatter.timeStyle = .short
         self.clearsSelectionOnViewWillAppear = false
 
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
@@ -25,14 +36,20 @@ class TaskListController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return taskList.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath)
 
-        cell.textLabel?.text = "Test value"
+        let task = taskList[indexPath.row]
+        cell.textLabel?.text = task.name + " " + (task.priority ?? "")
 
+        if let deadline = task.deadline {
+            cell.detailTextLabel?.text = (task.category ?? "") + " " + dateFormatter.string(from: deadline)
+        } else {
+            cell.detailTextLabel?.text = (task.category ?? "")
+        }
         return cell
     }
 
