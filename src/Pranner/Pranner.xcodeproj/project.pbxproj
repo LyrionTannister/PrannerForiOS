@@ -16,6 +16,7 @@
 		0937BFFD2427B0B40042A384 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0937BFFB2427B0B40042A384 /* LaunchScreen.storyboard */; };
 		84962F7424621488007F1232 /* TaskListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84962F7324621488007F1232 /* TaskListController.swift */; };
 		84962F7A2462223A007F1232 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84962F792462223A007F1232 /* Task.swift */; };
+		84962F7C24623690007F1232 /* TaskListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84962F7B24623690007F1232 /* TaskListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		0937BFFE2427B0B40042A384 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84962F7324621488007F1232 /* TaskListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListController.swift; sourceTree = "<group>"; };
 		84962F792462223A007F1232 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		84962F7B24623690007F1232 /* TaskListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				0937BFF32427B0B30042A384 /* Main.storyboard */,
 				0937BFFB2427B0B40042A384 /* LaunchScreen.storyboard */,
 				0937BFF92427B0B40042A384 /* Assets.xcassets */,
+				84962F7B24623690007F1232 /* TaskListCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84962F7C24623690007F1232 /* TaskListCell.swift in Sources */,
 				0937BFF22427B0B30042A384 /* ViewController.swift in Sources */,
 				0937BFEE2427B0B30042A384 /* AppDelegate.swift in Sources */,
 				0937BFF82427B0B30042A384 /* Pranner.xcdatamodeld in Sources */,

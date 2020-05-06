@@ -40,16 +40,19 @@ class TaskListController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath) as? TaskListCell else {
+            fatalError("Cell type")
+        }
 
         let task = taskList[indexPath.row]
-        cell.textLabel?.text = task.name + " " + (task.priority ?? "")
-
+        cell.labelTaskName.text = task.name
+        cell.labelTaskCategory.text = (task.category ?? "")
         if let deadline = task.deadline {
-            cell.detailTextLabel?.text = (task.category ?? "") + " " + dateFormatter.string(from: deadline)
+            cell.labelDeadline.text = dateFormatter.string(from: deadline)
         } else {
-            cell.detailTextLabel?.text = (task.category ?? "")
+            cell.labelDeadline.text = ""
         }
+
         return cell
     }
 
